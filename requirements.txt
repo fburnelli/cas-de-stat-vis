@@ -1,0 +1,6 @@
+#conda create --name cas-de python=3.9 
+#conda activate cas-de
+# pip install -r requirements.txt
+pandas
+ydata-profiling
+ipykernel
