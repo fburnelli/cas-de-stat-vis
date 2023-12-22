@@ -4,6 +4,7 @@
 pandas
 ydata-profiling
 ipykernel
+jupyter
 missingno
 pyarrow
 thefuzz
