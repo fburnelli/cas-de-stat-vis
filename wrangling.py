@@ -1,5 +1,5 @@
 def get_data():
-    # Code for getting data
+    # Code for getting data from table loan_cleans
     return None
 
 def handling_completeness():
@@ -19,7 +19,7 @@ def data_protection():
     return None
 
 def persist_data():
-    # Code for persisting data
+    # Code for persisting data to table wranglied_loans
     return None
 
 def wrangling():
