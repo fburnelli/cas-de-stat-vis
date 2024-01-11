@@ -5,11 +5,15 @@ import  logging
 from airflow import DAG
 from airflow.operators.dummy_operator import DummyOperator
 from airflow.operators.python_operator import PythonOperator
+from airflow.operators.python_operator import PythonVirtualenvOperator
+
+# Code wrangling
+# Env 
 
 
 logger = logging.getLogger("airflow.task")
 
-# 0 airflow installed alreeady in the env cas_de
+# 0 airflow installed already in the env cas_de
 
 # 1 Set up the  User 
 # airflow users  create --role Admin --username admin --email admin --firstname admin --lastname admin --password admin
@@ -89,10 +93,12 @@ start_task = DummyOperator(
     dag=dag,
 )
 
-wrangling_pipeline_task = PythonOperator(
+#wrangling_pipeline_task = PythonOperator(
+wrangling_pipeline_task = PythonVirtualenvOperator(
     task_id='wrangling_pipeline',
     python_callable=wrangling_pipeline,
     provide_context=True,
+    requirements=["pandas","urllib"],
     dag=dag,
 )
 
