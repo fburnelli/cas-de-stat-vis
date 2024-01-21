@@ -1,34 +1,33 @@
-def get_data():
-    # Code for getting data from table loan_cleans
-    return None
 
-def handling_completeness():
+def handling_accuracy(data):
     # Code for handling completeness
-    return None
+    return data
 
-def handling_integrity():
+def handling_completeness(data):
+    # Code for handling completeness
+    return data
+
+def handling_integrity(data):
     # Code for handling integrity
-    return None
+    return data
 
-def handling_text():
+def handling_text(data):
     # Code for handling text
-    return None
+    return data
 
-def data_protection():
+def data_protection(data):
     # Code for data protection
-    return None
+    return data
 
-def persist_data():
-    # Code for persisting data to table wranglied_loans
-    return None
 
-def wrangling():
-    data = get_data()
+def wrangling(data):
+    data = handling_accuracy(data)
     data = handling_completeness(data)
     data = handling_integrity(data)
     data = handling_text(data)
     data = data_protection(data)
-    persist_data(data)
+    return data
 
 if __name__ == "__main__":
-    wrangling()
+    data = None
+    wrangling(data)
